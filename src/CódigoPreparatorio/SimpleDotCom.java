@@ -4,10 +4,6 @@ public class SimpleDotCom {
 	private int[] locationCells;
 	private int numOfHits = 0;
 	
-	public SimpleDotCom(int[] locationCells, int numOfHits) {
-		this.locationCells = locationCells;
-		this.numOfHits = numOfHits;
-	}
 
 	public int[] getLocationCells() {
 		return locationCells;
@@ -24,7 +20,7 @@ public class SimpleDotCom {
 		for(int LC: locationCells){
 			
 			if(hint == LC) {
-				numOfHits+=numOfHits;
+				numOfHits++;
 				
 				if(numOfHits == 3) {
 					return "Eliminação";
