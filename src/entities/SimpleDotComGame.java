@@ -1,10 +1,10 @@
-package CodigodeTeste;
+package entities;
 
 import java.util.Scanner;
 
-import CódigoPreparatorio.SimpleDotCom;
+import exceptions.GameHelper;
 
-public class SimpleDotTesteDrive {
+public class SimpleDotComGame {
 
 	public static void main(String[] args) {
 
@@ -14,6 +14,7 @@ public class SimpleDotTesteDrive {
 
 		int numberOfGuesses = 0;
 		
+		GameHelper helper = new GameHelper();
 
 		boolean isAlive = true;
 		
@@ -25,10 +26,9 @@ public class SimpleDotTesteDrive {
 
 		while (isAlive == true) {
 			
-			System.out.print("Insira um numero: ");
-			String es = sc.next();
+			String guess = helper.getUserInput("Insira um numero: ");
 
-			String result = (dot.checkYourself(es));
+			String result = (dot.checkYourself(guess));
 			System.out.print(result);
 			System.out.print("\n");
 			numberOfGuesses++;

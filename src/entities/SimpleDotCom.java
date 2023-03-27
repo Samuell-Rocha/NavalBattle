@@ -1,4 +1,4 @@
-package CódigoPreparatorio;
+package entities;
 
 public class SimpleDotCom {
 	private int[] locationCells;
@@ -19,7 +19,7 @@ public class SimpleDotCom {
 	public String checkYourself(String guess) {
 
 		int hint = Integer.parseInt(guess);
-		String result = "Errou";
+		String result = "miss";
 
 		for (int LC : locationCells) {
 
