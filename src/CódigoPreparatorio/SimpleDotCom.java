@@ -19,7 +19,7 @@ public class SimpleDotCom {
 	public String checkYourself(String guess) {
 
 		int hint = Integer.parseInt(guess);
-		String result = "erro";
+		String result = "Errou";
 
 		for (int LC : locationCells) {
 
@@ -35,6 +35,7 @@ public class SimpleDotCom {
 		}
 		return result;
 	}
+
 
 	
 }

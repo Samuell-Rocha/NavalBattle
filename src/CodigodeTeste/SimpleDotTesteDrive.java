@@ -7,25 +7,40 @@ import CódigoPreparatorio.SimpleDotCom;
 public class SimpleDotTesteDrive {
 
 	public static void main(String[] args) {
-		
+
 		SimpleDotCom dot = new SimpleDotCom();
-		
+
 		Scanner sc = new Scanner(System.in);
+
+		int numberOfGuesses = 0;
 		
+
+		boolean isAlive = true;
 		
-		int[] locations = {5,3,4};
-		
+		int ramdomNum = (int) Math.random() * 5;
+
+		int[] locations = { ramdomNum, ramdomNum+1, ramdomNum+2 };
+
 		dot.setLocationCells(locations);
-		
-		
-		System.out.print("Insira um numero: ");
-		String es = sc.next();
-		
-		
-		System.out.print(dot.checkYourself(es));
+
+		while (isAlive == true) {
+			
+			System.out.print("Insira um numero: ");
+			String es = sc.next();
+
+			String result = (dot.checkYourself(es));
+			System.out.print(result);
+			System.out.print("\n");
+			numberOfGuesses++;
+
+			if (result.equals("kill")) {
+				isAlive = false;
+				System.out.print("Você usou " + numberOfGuesses + " palpites");
+				
+			}
+		}
 		
 
 	}
 
 }
-
