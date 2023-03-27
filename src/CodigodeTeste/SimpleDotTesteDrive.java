@@ -15,14 +15,14 @@ public class SimpleDotTesteDrive {
 		
 		int[] locations = {5,3,4};
 		
-		dot.selfLocationCells(locations);
+		dot.setLocationCells(locations);
 		
 		
 		System.out.print("Insira um numero: ");
 		String es = sc.next();
 		
 		
-		System.out.print(dot.checkYouself(es));
+		System.out.print(dot.checkYourself(es));
 		
 
 	}
